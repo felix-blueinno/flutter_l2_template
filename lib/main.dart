@@ -20,14 +20,19 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      // Set size to fill screen
       height: double.infinity,
       width: double.infinity,
+
+      // Background image:
       decoration: BoxDecoration(
         image: DecorationImage(
           fit: BoxFit.fill,
           image: NetworkImage(backgroundImgUrl),
         ),
       ),
+
+      // Main content:
       child: Padding(
         padding: const EdgeInsets.all(32.0),
         child: Column(
@@ -44,9 +49,9 @@ class HomePage extends StatelessWidget {
             SizedBox(height: 32),
             Row(
               children: [
-                bottomLeftWidget(context),
+                bottomLeftButton(context),
                 SizedBox(width: 16),
-                bottomRightWidget(context),
+                bottomRightButton(context),
               ],
             )
           ],
@@ -55,7 +60,7 @@ class HomePage extends StatelessWidget {
     );
   }
 
-  bottomLeftWidget(BuildContext context) {
+  bottomLeftButton(BuildContext context) {
     return SizedBox(
       width: 160,
       height: 96,
@@ -64,6 +69,8 @@ class HomePage extends StatelessWidget {
         child: Row(
           children: [
             Icon(Icons.chevron_left_rounded, color: Colors.white, size: 24),
+
+            // This widget will occupy all remaining space
             Spacer(),
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -82,7 +89,7 @@ class HomePage extends StatelessWidget {
     );
   }
 
-  bottomRightWidget(BuildContext context) {
+  bottomRightButton(BuildContext context) {
     return SizedBox(
       width: 160,
       height: 96,
@@ -100,6 +107,8 @@ class HomePage extends StatelessWidget {
                     style: TextStyle(fontSize: 16, color: Colors.white)),
               ],
             ),
+
+            // This widget will occupy all remaining space
             Spacer(),
             Icon(Icons.chevron_right_rounded, color: Colors.white, size: 24),
           ],
