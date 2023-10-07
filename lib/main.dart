@@ -2,17 +2,21 @@
 
 import 'package:flutter/material.dart';
 
-String backgroundImgUrl =
+var backgroundImgUrl =
     "https://i.pinimg.com/originals/90/bb/af/90bbaf9de7ca1af7aadfd8ad0397e375.gif";
 
-String myName = "Felix Wong";
-String myJob = "Student";
+var myName = "Felix Wong";
+var myJob = "Student";
 
-main() => runApp(MaterialApp(
+void main() {
+  runApp(
+    MaterialApp(
       home: Scaffold(
         body: HomePage(),
       ),
-    ));
+    ),
+  );
+}
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -40,12 +44,20 @@ class HomePage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.end,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text("Hi, I'm",
-                style: TextStyle(fontSize: 48, color: Colors.white)),
+            Text(
+              "Hi, I'm",
+              style: TextStyle(fontSize: 48, color: Colors.white),
+            ),
             SizedBox(height: 8),
-            Text(myName, style: TextStyle(fontSize: 48, color: Colors.white)),
+            Text(
+              myName,
+              style: TextStyle(fontSize: 48, color: Colors.white),
+            ),
             SizedBox(height: 16),
-            Text(myJob, style: TextStyle(fontSize: 24, color: Colors.white60)),
+            Text(
+              myJob,
+              style: TextStyle(fontSize: 24, color: Colors.white60),
+            ),
             SizedBox(height: 32),
             Row(
               children: [
@@ -65,10 +77,17 @@ class HomePage extends StatelessWidget {
       width: 160,
       height: 96,
       child: ElevatedButton(
-        onPressed: () => print("Replace_with_your_function"),
+        onPressed: () {
+          print("Replace_with_your_function");
+        },
+        style: ElevatedButton.styleFrom(backgroundColor: Colors.grey[900]),
         child: Row(
           children: [
-            Icon(Icons.chevron_left_rounded, color: Colors.white, size: 24),
+            Icon(
+              Icons.chevron_left_rounded,
+              color: Colors.white,
+              size: 24,
+            ),
 
             // This widget will occupy all remaining space
             Spacer(),
@@ -76,15 +95,19 @@ class HomePage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
-                Text("About",
-                    style: TextStyle(fontSize: 16, color: Colors.white)),
-                Text("Me", style: TextStyle(fontSize: 16, color: Colors.white)),
+                Text(
+                  "About",
+                  style: TextStyle(fontSize: 16, color: Colors.white),
+                ),
+                Text(
+                  "Me",
+                  style: TextStyle(fontSize: 16, color: Colors.white),
+                ),
               ],
             ),
             SizedBox(width: 8)
           ],
         ),
-        style: ElevatedButton.styleFrom(primary: Colors.grey[900]),
       ),
     );
   }
@@ -94,7 +117,10 @@ class HomePage extends StatelessWidget {
       width: 160,
       height: 96,
       child: ElevatedButton(
-        onPressed: () => print("Replace_with_your_function"),
+        onPressed: () {
+          print("Replace_with_your_function");
+        },
+        style: ElevatedButton.styleFrom(backgroundColor: Colors.grey[900]),
         child: Row(
           children: [
             SizedBox(width: 8),
@@ -102,18 +128,26 @@ class HomePage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text("My", style: TextStyle(fontSize: 16, color: Colors.white)),
-                Text("Work",
-                    style: TextStyle(fontSize: 16, color: Colors.white)),
+                Text(
+                  "My",
+                  style: TextStyle(fontSize: 16, color: Colors.white),
+                ),
+                Text(
+                  "Work",
+                  style: TextStyle(fontSize: 16, color: Colors.white),
+                ),
               ],
             ),
 
             // This widget will occupy all remaining space
             Spacer(),
-            Icon(Icons.chevron_right_rounded, color: Colors.white, size: 24),
+            Icon(
+              Icons.chevron_right_rounded,
+              color: Colors.white,
+              size: 24,
+            ),
           ],
         ),
-        style: ElevatedButton.styleFrom(primary: Colors.grey[900]),
       ),
     );
   }
